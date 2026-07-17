@@ -8,18 +8,39 @@ A modern, responsive multi-page clothing website for **Nostra**, a fictional slo
 
 # 📸 Screenshots
 
-| Home | Collections |
-|------|-------------|
-| ![](image/screenshots/Nostra-Home.png) | ![](image/screenshots/Collections-Page.png) |
+## 🏠 Home Page
 
-| Contact | Mobile Home |
-|---------|-------------|
-| ![](image/screenshots/Nostra-Contact%20Page.png) | ![](image/screenshots/Mobile-Home.jpeg) |
+![Home Page](image/screenshots/Nostra-Home.png)
 
-| Mobile Contact | Mobile Collections |
-|----------------|--------------------|
-| ![](image/screenshots/Mobile-contact.jpeg) | ![](image/screenshots/Mobile-Collections.jpeg) |
+---
 
+## 🛍️ Collections Page
+
+![Collections Page](image/screenshots/Collections-Page.png)
+
+---
+
+## 📩 Contact Page
+
+![Contact Page](image/screenshots/Nostra-Contact%20Page.png)
+
+---
+
+## 📱 Mobile Home
+
+![Mobile Home](image/screenshots/Mobile-Home.jpeg)
+
+---
+
+## 📱 Mobile Collections
+
+![Mobile Collections](image/screenshots/Mobile-Collections.jpeg)
+
+---
+
+## 📱 Mobile Contact
+
+![Mobile Contact](image/screenshots/Mobile-contact.jpeg)
 ---
 
 # ✨ Features
