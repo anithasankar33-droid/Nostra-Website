@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections — Nostra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="wrap nav-row">
+            <a href="index.html" class="wordmark">Nostra</a>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="collections.html" aria-current="page">Collections</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section style="padding-bottom:0;">
+            <div class="wrap">
+                <p class="eyebrow">Full catalogue — SS26</p>
+                <h1 style="font-size:clamp(36px,6vw,64px); margin-bottom:32px;">Collections</h1>
+
+                <div class="controls">
+                    <div class="search-field">
+                        <label for="search" class="sr-only" style="position:absolute; left:-9999px;">Search
+                            products</label>
+                        <input type="text" id="search" placeholder="Search by name, e.g. &quot;jacket&quot;"
+                            autocomplete="off">
+                    </div>
+                    <div class="chip-row" id="filter-chips" role="group" aria-label="Filter by category">
+                        <!-- chips injected by script.js -->
+                    </div>
+                </div>
+
+                <p class="results-count" id="results-count"></p>
+            </div>
+        </section>
+
+        <section style="padding-top:0;">
+            <div class="wrap">
+                
+                <div class="grid" id="product-grid">
+                    <!-- product cards injected by script.js -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-row">
+            <span>© 2026 Nostra</span>
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

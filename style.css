@@ -1,0 +1,561 @@
+/* =========================================================
+   NOSTRA — basic stylesheet
+   Plain system fonts, simple colors, simple layout.
+   Class names match the HTML/JS, so functionality is unchanged.
+   ========================================================= */
+
+:root {
+    --bg: #ffffff;
+    --text: #222222;
+    --muted: #666666;
+    --primary: #011d4e;
+    /* blue accent */
+    --accent: #d98c00;
+    /* orange/gold accent */
+    --error: #c0392b;
+    /* red */
+    --border: #dddddd;
+    --border-dark: #bbbbbb;
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: var(--primary);
+}
+
+.wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.eyebrow {
+    font-size: 13px;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+h1,
+h2,
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+/* -------------------- Header / Nav -------------------- */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--bg);
+    border-bottom: 2px solid var(--border);
+}
+
+.nav-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.wordmark {
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text);
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 15px;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+    color: var(--primary);
+    text-decoration: underline;
+
+}
+
+.nav-toggle {
+    display: none;
+    background: #fff;
+    border: 1px solid var(--border-dark);
+    border-radius: 3px;
+    width: 40px;
+    height: 36px;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-toggle span,
+.nav-toggle span::before,
+.nav-toggle span::after {
+    content: "";
+    position: absolute;
+    left: 9px;
+    right: 9px;
+    height: 2px;
+    background: var(--text);
+}
+
+.nav-toggle span {
+    top: 17px;
+}
+
+.nav-toggle span::before {
+    top: -6px;
+}
+
+.nav-toggle span::after {
+    top: 6px;
+}
+
+@media (max-width: 720px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        flex-direction: column;
+        gap: 0;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .nav-links.open {
+        max-height: 300px;
+    }
+
+    .nav-links li {
+        border-top: 1px solid var(--border);
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 14px 20px;
+    }
+}
+
+/* -------------------- Buttons -------------------- */
+.btn {
+    display: inline-block;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid var(--primary);
+    border-radius: 4px;
+    background: var(--primary);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #0d0a0e;
+}
+
+.btn.ghost {
+    background: transparent;
+    color: var(--primary);
+}
+
+.btn.ghost:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+/* -------------------- Hero -------------------- */
+.hero {
+    padding-top: 48px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--border);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 6vw, 52px);
+    line-height: 1.15;
+}
+
+.hero h1 em {
+    font-style: normal;
+    color: var(--primary);
+}
+
+.hero-side {
+    font-size: 15px;
+    color: var(--muted);
+    padding-left: 0;
+}
+
+.hero-side p {
+    margin: 0 0 16px;
+}
+
+@media (max-width: 820px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* -------------------- Section scaffolding -------------------- */
+section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 14px;
+}
+
+.section-head h2 {
+    font-size: 26px;
+}
+
+/* -------------------- Product grid & cards -------------------- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    background: rgb(255, 255, 255);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card-figure {
+    aspect-ratio: 4/5;
+    background: #0a0553;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.card-figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    margin-bottom: 24px;
+}
+
+.card-figure .swatch {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: var(--muted);
+    text-align: center;
+    padding: 10px;
+}
+
+.card-tag {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    font-size: 11px;
+    background: var(--primary);
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 3px;
+}
+
+.card-index {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.card h3 {
+    font-size: 18px;
+}
+
+.card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.card-price {
+    font-weight: 700;
+    color: var(--text);
+}
+
+/* -------------------- Collections controls -------------------- */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.search-field {
+    position: relative;
+    flex: 1 1 240px;
+    max-width: 400px;
+}
+
+.search-field input {
+    width: 100%;
+    font-family: inherit;
+    font-size: 15px;
+    padding: 10px 12px;
+    border: 1px solid var(--border-dark);
+    border-radius: 4px;
+}
+
+.chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.chip {
+    font-size: 13px;
+    padding: 8px 14px;
+    border: 1px solid var(--border-dark);
+    border-radius: 4px;
+    background: #fff;
+    color: var(--text);
+    cursor: pointer;
+}
+
+.chip[aria-pressed="true"] {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+.results-count {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 16px;
+}
+
+.empty-state {
+    grid-column: 1 / -1;
+    padding: 50px 20px;
+    text-align: center;
+    color: var(--muted);
+    background: lch(74.46% 44.74 334.77);
+    border: 1px dashed var(--border-dark);
+}
+
+.empty-state strong {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+
+/* -------------------- Editorial strip (home) -------------------- */
+.strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.strip div {
+    padding: 16px 20px;
+    font-size: 13px;
+    border-left: 1px solid var(--border);
+    color: var(--muted);
+}
+
+.strip div:first-child {
+    border-left: none;
+}
+
+@media (max-width: 720px) {
+    .strip {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .strip div:nth-child(3) {
+        border-left: none;
+    }
+}
+
+/* -------------------- Contact page -------------------- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+@media (max-width: 820px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 18px;
+}
+
+.field label {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.field input,
+.field textarea {
+    font-family: inherit;
+    font-size: 15px;
+    padding: 10px 12px;
+    border: 1px solid var(--border-dark);
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.field.error input,
+.field.error textarea {
+    border-color: var(--error);
+}
+
+.field-error {
+    font-size: 12.5px;
+    color: var(--error);
+    min-height: 16px;
+}
+
+.form-status {
+    font-size: 14px;
+    padding: 10px 12px;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    border-radius: 4px;
+    display: none;
+}
+
+.form-status.show {
+    display: block;
+}
+
+.info-list {
+    list-style: none;
+    margin: 0 0 24px;
+    padding: 0;
+}
+
+.info-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.info-list span:first-child {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* -------------------- Footer -------------------- */
+.site-footer {
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.footer-row a {
+    text-decoration: none;
+}

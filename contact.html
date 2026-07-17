@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Nostra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="wrap nav-row">
+            <a href="index.html" class="wordmark">Nostra</a>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="wrap">
+                <p class="eyebrow">We reply within 2 business days</p>
+                <h1 style="font-size:clamp(36px,6vw,64px); margin: bottom 40px;">Contact us</h1>
+                <div class="contact-grid">
+                    <div>
+                        <form id="contact-form" novalidate>
+                            <div class="field" id="field-name">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your full name">
+                                <span class="field-error" id="error-name"></span>
+                            </div>
+
+                            <div class="field" id="field-message">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5"
+                                    placeholder="How can we help?"></textarea>
+                                <span class="field-error" id="error-message"></span>
+                            </div>
+
+                            <button type="submit" class="btn">Send Message</button>
+                            <p class="form-status" id="form-status" role="status"></p>
+                        </form>
+                    </div>
+                    <div>
+                        <ul class="info-list">
+                            <li><span>Studio</span><span>Tenkasi, Tamil Nadu, IN</span></li>
+                            <li><span>Email</span><span>hello@nostra.example</span></li>
+                            <li><span>Hours</span><span>Mon-Fri, 10:00-8:00 IST</span></li>
+
+                            <li><span>Support</span><span>Order &amp; fit questions</span></li>
+                        </ul>
+                        <p style="color:var(--ink-70); font:size 15px; max-width:44;">
+                            For order changes, include your order number in the message field
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-row">
+            <span>@ 2026 Nostra</span>
+            <a href="collections.html">Collection</a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
