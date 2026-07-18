@@ -18,13 +18,13 @@ Nostra presents a premium clothing collection across three pages, combining a co
 
 | Home | Collections | Contact |
 |------|-------------|---------|
-| ![Home Desktop](image/screenshots/home) | ![Collections Desktop](screenshots/collections-desktop.png) | ![Contact Desktop](screenshots/contact-desktop.png) |
+| ![Home Desktop](image/screenshots/home.png) | ![Collections Desktop](/image/screenshots/collections.png) | ![Contact Desktop](image/screenshots/contact.png) |
 
 ### Mobile
 
 | Home | Collections | Contact |
 |------|-------------|---------|
-| ![Home Mobile](screenshots/home-mobile.png) | ![Collections Mobile](screenshots/collections-mobile.png) | ![Contact Mobile](screenshots/contact-mobile.png) |
+| ![Home Mobile](image/screenshots/mobilehome.png) | ![Collections Mobile](image/screenshots/mobilecollections.png) | ![Contact Mobile](screenshots/mobilecontact.png) |
 
 ---
 
