@@ -24,7 +24,7 @@ Nostra presents a premium clothing collection across three pages, combining a co
 
 | Home | Collections | Contact |
 |------|-------------|---------|
-| ![Home Mobile](image/screenshots/mobilehome.png) | ![Collections Mobile](image/screenshots/mobilecollections.png) | ![Contact Mobile](screenshots/mobilecontact.png) |
+| ![Home Mobile](image/screenshots/mobilehome.png) | ![Collections Mobile](image/screenshots/mobilecollections.png) | ![Contact Mobile](/image/screenshots/mobilecontact.png) |
 
 ---
 
